@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: micro-manufacturing
+
+  datasource:
+    url:
+    driverClassName: org.h2.Driver
+    username:
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
