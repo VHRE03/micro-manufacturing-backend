@@ -11,26 +11,26 @@ import java.util.UUID;
 @Schema(description = "DTO para respuesta de materiales")
 public record MaterialResponseDTO(
 	@Schema(
-		description = "ID único del material",
+		description = "ID único del material_type",
 		example = "123e4567-e89b-12d3-a456-426614174000",
 		accessMode = Schema.AccessMode.READ_ONLY
 	)
 	UUID id,
 
 	@Schema(
-		description = "Tipo de material",
+		description = "Tipo de material_type",
 		example = "FILAMENT"
 	)
 	String name,
 
 	@Schema(
-		description = "Tipo de material",
+		description = "Tipo de material_type",
 		example = "FILAMENT"
 	)
-	MaterialTypes type,
+	MaterialTypes material_type,
 
 	@Schema(
-		description = "Color del material",
+		description = "Color del material_type",
 		example = "BLACK"
 	)
 	MaterialColor color,

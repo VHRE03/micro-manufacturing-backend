@@ -21,7 +21,7 @@ import java.util.UUID;
 		@Index(name = "idx_material_created", columnList = "createdAt DESC")
 	},
 	uniqueConstraints = {
-		@UniqueConstraint(name = "uk_material_name_type_color", columnNames = { "name", "type", "color" })
+		@UniqueConstraint(name = "uk_material_name_type_color", columnNames = { "name", "material_type", "color" })
 	}
 )
 @Getter
@@ -40,8 +40,8 @@ public class Material {
 	private String name;
 
 	@Enumerated(EnumType.STRING)
-	@Column(nullable = false)
-	private MaterialTypes type;
+	@Column(name = "material_type", nullable = false)
+	private MaterialTypes materialType;
 
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)

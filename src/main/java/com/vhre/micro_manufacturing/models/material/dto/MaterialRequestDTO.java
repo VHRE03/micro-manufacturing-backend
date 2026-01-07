@@ -12,7 +12,7 @@ import jakarta.validation.constraints.Size;
 @Schema(description = "DTO para creación y actualización de materiales")
 public record MaterialRequestDTO(
 	@Schema(
-		description = "Nombre único del material",
+		description = "Nombre único del material_type",
 		example = "PLA Negro Premium",
 		minLength = 2,
 		maxLength = 255,
@@ -23,19 +23,19 @@ public record MaterialRequestDTO(
 	String name,
 
 	@Schema(
-		description = "Tipo de material",
+		description = "Tipo de material_type",
 		example = "FILAMENT",
 		requiredMode = Schema.RequiredMode.REQUIRED
 	)
-	@NotNull(message = "El tipo de material es obligatorio.")
-	MaterialTypes material,
+	@NotNull(message = "El tipo de material_type es obligatorio.")
+	MaterialTypes material_type,
 
 	@Schema(
-		description = "Color del material",
+		description = "Color del material_type",
 		example = "BLACK",
 		requiredMode = Schema.RequiredMode.REQUIRED
 	)
-	@NotNull(message = "El color del material es obligatorio")
+	@NotNull(message = "El color del material_type es obligatorio")
 	MaterialColor color,
 
 	@Schema(
